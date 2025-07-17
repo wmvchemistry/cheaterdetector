@@ -2,7 +2,7 @@
 import streamlit as st
 import requests
 from io import StringIO  # text files
-import PyPDF2  #F pdfs
+import PyPDF2  #Fpdfs
 from docx import Document  # docx, sheets
 
 # Helper function to extract text
