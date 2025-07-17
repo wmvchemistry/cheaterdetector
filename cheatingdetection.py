@@ -4,9 +4,7 @@ import requests
 from io import StringIO  # text files
 import PyPDF2  #F pdfs
 from docx import Document  # docx, sheets
-from io import StringIO #text files
-import PyPDF2 #pdfs
-from docx import Document #docx, sheets
+
 # Helper function to extract text
 def extract_text_from_file(file):
     try:
