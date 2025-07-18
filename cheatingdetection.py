@@ -39,15 +39,15 @@ st.divider()
 if submit:
     if student1file:
         student1work=extract_text_from_file(student1file)
-    if student1file:
-        student1work=extract_text_from_file(student2file)
+    if student2file:
+        student2work=extract_text_from_file(student2file)
     headers={ "X-Api-Key":API_KEY}
     body={"text_1":student1work,"text_2":student2work}
     ai_response=requests.post(url=URL,headers=headers, json=body)
     ai_response_result=ai_response.json()
    
     percentage=round(float(ai_response_result["similarity"]) * 100)
-    st.info(f"there is a {percentage}% simalarity between student1 and student2")
+    st.info(f"there is a {percentage}% similarity between student1 and student2")
     if percentage>=90:
        st.write("Cheating")
     elif percentage>=60:
